@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" media="all" href="favicon.ico">
     <title>Usher Syndrome Database</title>
 
     <!-- Bootstrap -->
@@ -181,28 +182,47 @@
                 <h2>Contacts</h2>
                 <p>Several level of users can be set up with LOVD. You may be interested in the "Submitter" level, which allows you to submit your own data. You can define them as private or not. Private data can only be seen by you (once identified) and the curator. The process is fast and easy: submitted data are checked by the curator, and once validated, are immediately available online.</p>
             </div>
-            <div class="col-lg-6 tighten">
+            <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Anne-Françoise Roux
                     </div>
                     <div class="panel-body">
-                        <a href="anne-francoise.roux@inserm.fr">Email Address</a><br />
+                        <a href="mailto:%61%6E%6E%65%2D%66%72%61%6E%63%6F%69%73%65%2E%72%6F%75%78%40%69%6E%73%65%72%6D%2E%66%72">Email Address</a><br />
                         <a href="https://www.researchgate.net/project/French-DMD-database">Research</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        David Baux
+                    </div>
+                    <div class="panel-body">
+                        <a href="mailto:%64%61%76%69%64%2E%62%61%75%78%40%69%6E%73%65%72%6D%2E%66%72">Email Address</a><br />
+                        <a href="https://www.researchgate.net/scientific-contributions/38799195_David_Baux">Research</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 tighten">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        David Baux
+                        Montpellier Laboratory of Molecular Genetics 
                     </div>
                     <div class="panel-body">
-                        <a href="david.baux@inserm.fr">Email Address</a><br />
-                        <a href="https://www.researchgate.net/scientific-contributions/38799195_David_Baux">Research</a>
+                        <a href="https://neuro-2.iurc.montp.inserm.fr/usher">Team Site</a>
                     </div>
                 </div>
-
+            </div>
+            <div class="col-lg-6 tighten">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Montpellier Bioinformatics for Clinical Diagnosis
+                    </div>
+                    <div class="panel-body">
+                        <a href="https://neuro-2.iurc.montp.inserm.fr/mobidic/">Team Site</a>
+                    </div>
+                </div>
             </div>
         </div><!-- /.row -->
         <div class="row" id="overview">
@@ -412,6 +432,20 @@
             target: '#navbar',
             offset: 30
         })
+
+
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing');
+            });
+        });
     </script>
 
 </body>
